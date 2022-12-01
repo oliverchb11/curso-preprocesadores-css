@@ -1,0 +1,68 @@
+@color-primario: #333333;
+@color-secundario: #8841da;
+@color-variacion: #012179;
+@color-claro: #ffffff;
+@color-oscuro: #000000;
+@dark-mode: true;
+@fuente1: 'Lato', sans-serif;
+@fuente2: 'Oswal', sans-serif;
+@fuente-base: 18px;
+.sombra-caja{
+    box-shadow: 0px 5px 15px 0px fade(@color-primario, 50%);
+}
+.oswal{
+    font-family: @fuente2;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.fuente(@font-size){
+    font-size: @font-size;
+    line-height: @font-size + 10% ;
+}
+*{
+    box-sizing: border-box;
+}
+
+.darkMode() when (@dark-mode = true){
+    background-color: @color-oscuro;
+    .intro{
+        background-color: @color-secundario;
+    }
+    .caja {
+        span {
+          color: fade(@color-claro, 80%);
+        }
+      }
+    .articulo--principal {
+        color: @color-claro;
+    
+        h1, h2, h3 {
+          color: @color-secundario;
+        }
+      }
+      .caja__contenido {
+        background-color: @color-secundario;
+        color: @color-claro;
+    
+        a{
+          color: @color-claro;
+        }
+      }
+}
+
+body{
+    margin: 0;
+    font-family: @fuente1;
+    color: @color-primario;
+    .fuente(@fuente-base);
+    .darkMode
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    .oswal;
+
+}
+

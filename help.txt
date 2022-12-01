@@ -1,0 +1,15 @@
+metodologias para estrucurar codigo css
+
+- SMACSS
+- BEM
+- Atomic CSS
+- OOCSS
+
+* BEM: BLOQUES, ELEMENTOS Y MODIFICADORES
+
+-ventajas
+- Menos repeticiones
+
+- Independencia absoluta
+
+- Mejoria en la herencia multiple
